@@ -15,7 +15,7 @@ export default function StaffAuthLayout({ children }: { children: React.ReactNod
             <Sparkles className="h-5 w-5 text-white" />
           </span>
           <span className="font-display text-xl font-bold text-white">
-            Marketa<span className="text-sky-400"> IT</span>
+            Marketa Digital<span className="text-sky-400"> IT</span>
           </span>
         </Link>
 

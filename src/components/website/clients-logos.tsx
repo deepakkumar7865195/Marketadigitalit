@@ -11,7 +11,7 @@ export function ClientsLogos() {
         <SectionHeading
           eyebrow="Trusted By"
           title="Businesses That Grow With"
-          highlight="Marketa"
+          highlight="Marketa Digital IT"
           description=""
         />
       </div>

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { LogIn, Menu, Sparkles, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
@@ -31,12 +32,14 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-sky-400 shadow-md shadow-blue-600/30">
-            <Sparkles className="h-5 w-5 text-white" />
-          </span>
-          <span className="font-display text-lg font-bold tracking-tight text-foreground">
-            Marketa<span className="text-primary"> IT</span>
-          </span>
+          <Image
+            src="/gallery/Marketa Digital it.png"
+            alt="Marketa Digital IT"
+            width={570}
+            height={321}
+            priority
+            className="h-10 w-auto"
+          />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -52,13 +55,6 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2.5 lg:flex">
-          <Link
-            href="/staff/login"
-            className="inline-flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-          >
-            <LogIn className="h-4 w-4" />
-            Staff Login
-          </Link>
           <Button asChild variant="gradient" size="default">
             <Link href="/contact">Get Free Consultation</Link>
           </Button>
@@ -90,9 +86,13 @@ export function Navbar() {
               className="absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col bg-background shadow-2xl"
             >
               <div className="flex items-center justify-between border-b px-5 py-4">
-                <span className="font-display text-lg font-bold">
-                  Marketa<span className="text-primary"> IT</span>
-                </span>
+                <Image
+                  src="/gallery/Marketa Digital it.png"
+                  alt="Marketa Digital IT"
+                  width={570}
+                  height={321}
+                  className="h-10 w-auto"
+                />
                 <button
                   onClick={() => setOpen(false)}
                   className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"
@@ -120,12 +120,6 @@ export function Navbar() {
                 ))}
               </div>
               <div className="mt-auto space-y-3 border-t p-5">
-                <Button asChild variant="outline" className="w-full">
-                  <Link href="/staff/login" onClick={() => setOpen(false)}>
-                    <LogIn className="h-4 w-4" />
-                    Staff Login
-                  </Link>
-                </Button>
                 <Button asChild variant="gradient" className="w-full">
                   <Link href="/contact" onClick={() => setOpen(false)}>
                     Get Free Consultation

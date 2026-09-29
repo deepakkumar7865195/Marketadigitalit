@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle2, Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
@@ -87,6 +88,16 @@ export function ContactSection() {
                   <p className="text-sm font-semibold">{COMPANY.address}</p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center rounded-2xl border bg-card p-5 shadow-sm">
+              <Image
+                src="/gallery/Marketa Digital it.png"
+                alt="Marketa Digital IT logo"
+                width={570}
+                height={321}
+                className="h-24 w-auto"
+              />
             </div>
           </div>
 

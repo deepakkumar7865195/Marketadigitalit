@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
@@ -72,6 +73,17 @@ export function Hero() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* Left: copy */}
           <motion.div variants={container} initial="hidden" animate="visible">
+            <motion.div variants={item}>
+              <Image
+                src="/gallery/Marketa Digital it.png"
+                alt="Marketa Digital IT"
+                width={570}
+                height={321}
+                priority
+                className="h-16 w-auto sm:h-20"
+              />
+            </motion.div>
+
             <motion.div variants={item}>
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary">
                 <Sparkles className="h-3.5 w-3.5" />

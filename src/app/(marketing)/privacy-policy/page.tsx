@@ -25,11 +25,11 @@ export default function PrivacyPolicyPage() {
     ],
     [
       "Your Rights",
-      "You may request access to, correction of, or deletion of your personal data at any time by emailing support@marketadigitalit.com. We will respond within 30 days.",
+      "You may request access to, correction of, or deletion of your personal data at any time by emailing deepak.marketadigitalit@gmail.com. We will respond within 30 days.",
     ],
     [
       "Contact",
-      "For any privacy questions, contact Marketa Digital IT at support@marketadigitalit.com or +91 78702 41157. This policy was last updated in September 2026.",
+      "For any privacy questions, contact Marketa Digital IT at deepak.marketadigitalit@gmail.com or +91 78702 41157. This policy was last updated in September 2026.",
     ],
   ];
 

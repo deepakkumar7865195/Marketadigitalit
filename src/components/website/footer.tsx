@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import { SERVICES } from "@/lib/constants";
 
@@ -38,11 +39,14 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-sky-400">
-                <Sparkles className="h-5 w-5 text-white" />
-              </span>
-              <span className="font-display text-lg font-bold text-white">
-                Marketa<span className="text-sky-400"> IT</span>
+              <span className="rounded-xl bg-white p-2">
+                <Image
+                  src="/gallery/Marketa Digital it.png"
+                  alt="Marketa Digital IT"
+                  width={570}
+                  height={321}
+                  className="h-10 w-auto"
+                />
               </span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed">

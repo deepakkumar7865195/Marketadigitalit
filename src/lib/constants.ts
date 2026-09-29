@@ -16,10 +16,10 @@ import {
 export const COMPANY = {
   name: "Marketa Digital IT",
   domain: "marketadigitalit.com",
-  email: "support@marketadigitalit.com",
+  email: "deepak.marketadigitalit@gmail.com",
   phone: "+917870241157",
   phoneDisplay: "78702 41157",
-  address: "Nagpur, Maharashtra, India",
+  address: "Hela Battala, Sukanta Pally, Baguiati, Kolkata, West Bengal 700157",
   timezone: "Asia/Kolkata",
 };
 

@@ -36,7 +36,7 @@ export function Sidebar({ profile, onNavigate }: SidebarProps) {
           <Sparkles className="h-4.5 w-4.5 text-white" />
         </span>
         <span className="font-display text-base font-bold text-navy">
-          Marketa<span className="text-sky-500"> IT</span>
+          Marketa Digital<span className="text-sky-500"> IT</span>
         </span>
       </Link>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Compass, Eye } from "lucide-react";
 import { Reveal } from "@/components/website/reveal";
 
@@ -38,8 +39,19 @@ export function About() {
                 <div className="relative mt-5 aspect-[16/9] overflow-hidden rounded-xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-sky-500" />
                   <div className="absolute inset-0 bg-grid-navy opacity-60" />
+                  <div className="absolute inset-0 flex items-center justify-center p-6">
+                    <div className="rounded-2xl bg-white/95 px-6 py-4 shadow-xl">
+                      <Image
+                        src="/gallery/Marketa Digital it.png"
+                        alt="Marketa Digital IT logo"
+                        width={570}
+                        height={321}
+                        className="h-24 w-auto"
+                      />
+                    </div>
+                  </div>
                   <div className="absolute bottom-4 left-4 rounded-lg bg-white/15 px-3 py-2 text-xs font-semibold text-white backdrop-blur">
-                    Nagpur, Maharashtra · Serving clients worldwide
+                    Kolkata, West Bengal · Serving clients worldwide
                   </div>
                   <div className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 backdrop-blur">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-primary">

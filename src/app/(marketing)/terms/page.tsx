@@ -37,7 +37,7 @@ export default function TermsPage() {
     ],
     [
       "Contact",
-      "For questions about these terms, contact support@marketadigitalit.com or +91 78702 41157.",
+      "For questions about these terms, contact deepak.marketadigitalit@gmail.com or +91 78702 41157.",
     ],
   ];
 

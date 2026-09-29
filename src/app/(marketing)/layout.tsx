@@ -15,8 +15,9 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
-      addressLocality: "Nagpur",
-      addressRegion: "Maharashtra",
+      addressLocality: "Kolkata",
+      addressRegion: "West Bengal",
+      postalCode: "700157",
     },
     contactPoint: {
       "@type": "ContactPoint",
