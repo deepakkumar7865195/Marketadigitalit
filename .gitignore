@@ -30,11 +30,36 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files — never commit real credentials, but DO keep the template
+# so new devs know which variables are required.
 .env*
+!.env.example
 
 # vercel
 .vercel
+
+# supabase cli caches (schema.sql under supabase/ IS committed)
+supabase/.temp
+supabase/.branches
+supabase/.env
+
+# turbopack / swc caches
+.turbo
+.swc
+
+# logs
+*.log
+logs/
+
+# editors & OS cruft
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
 # typescript
 *.tsbuildinfo
