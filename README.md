@@ -59,19 +59,6 @@ cp .env.example .env.local   # fill in your Supabase values
 npm run dev                  # http://localhost:3000
 ```
 
-### 1a. Explore without Supabase (demo mode)
-
-Set `NEXT_PUBLIC_DEMO_AUTH=true` in `.env.local` to run the entire staff portal on an
-in-memory mock backend seeded with ~8 employees, 14 days of attendance, projects,
-tasks, reports, leaves, holidays, clients and leads. No Supabase account needed.
-
-Login at `/staff/login` with **`demo@marketadigitalit.in` / `Demo@1234`** (super admin).
-Each seeded staff member has a **`FirstName@1234`** password (e.g. `Ananya@1234`,
-`Rahul@1234`) — the login page lists every demo account and one click fills it.
-Admin-created employees default to `Staff@1234`. Mutations persist until the dev
-server restarts. `isDemoMode()` is read at runtime, so a false/absent flag means the
-app falls back to real Supabase.
-
 ## 2. Supabase Setup
 
 1. Create a project at [supabase.com/dashboard](https://supabase.com/dashboard).

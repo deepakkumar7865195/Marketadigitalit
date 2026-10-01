@@ -10,8 +10,6 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { loginSchema } from "@/lib/validations";
 import { actionLogin } from "@/lib/actions";
-import { DEMO_EMAIL, DEMO_PASSWORD, isDemoMode } from "@/lib/demo-mode";
-import { DEMO_ACCOUNTS } from "@/lib/demo-data";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -26,11 +24,8 @@ function LoginFormInner() {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm<LoginForm>({ resolver: zodResolver(loginSchema) });
-
-  const demo = isDemoMode();
 
   async function onSubmit(values: LoginForm) {
     setLoading(true);
@@ -47,47 +42,6 @@ function LoginFormInner() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
-      {demo ? (
-        <div className="rounded-xl border border-primary/30 bg-primary/5 p-3 text-xs leading-relaxed">
-          <p className="font-semibold text-primary">Demo mode is ON — no backend required.</p>
-          <p className="mt-1 text-muted-foreground">
-            Use a demo account below (email / password) or tap the button to fill the admin.
-          </p>
-          <div className="mt-2 max-h-40 overflow-auto rounded-lg bg-background/70 p-2 font-mono text-[10px]">
-            {DEMO_ACCOUNTS.map((a) => (
-              <button
-                key={a.email}
-                type="button"
-                onClick={() => {
-                  setValue("email", a.email);
-                  setValue("password", a.password);
-                }}
-                className="flex w-full items-center justify-between gap-2 rounded px-2 py-1 text-left hover:bg-primary/10"
-              >
-                <span className="truncate">
-                  <span className="font-semibold">{a.name}</span>
-                  <span className="text-muted-foreground"> · {a.role}</span>
-                </span>
-                <span className="shrink-0 text-muted-foreground">
-                  {a.email} / {a.password}
-                </span>
-              </button>
-            ))}
-          </div>
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            className="mt-2"
-            onClick={() => {
-              setValue("email", DEMO_EMAIL);
-              setValue("password", DEMO_PASSWORD);
-            }}
-          >
-            Fill demo admin credentials
-          </Button>
-        </div>
-      ) : null}
       <div className="space-y-1.5">
         <Label htmlFor="email">Email</Label>
         <div className="relative">
