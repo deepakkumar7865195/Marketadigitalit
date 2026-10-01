@@ -56,6 +56,15 @@ export function PortfolioGrid() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-sky-500" />
                 <div className="absolute inset-0 bg-grid-navy opacity-50" />
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                ) : null}
                 <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
                   {p.category}
                 </div>
@@ -64,9 +73,6 @@ export function PortfolioGrid() {
                     <ArrowUpRight className="h-5 w-5" />
                   </span>
                 </div>
-                {p.image ? (
-                  <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
-                ) : null}
               </div>
               <div className="p-5">
                 <h3 className="font-display text-lg font-semibold">{p.title}</h3>
