@@ -8,10 +8,11 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except:
-     * - _next/static, _next/image, favicon
-     * - public assets
+     * Only the staff portal and the auth callback need a Supabase session.
+     * Leaving the public marketing site out of the matcher keeps it
+     * independent of Supabase configuration.
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt)$).*)",
+    "/staff/:path*",
+    "/auth/:path*",
   ],
 };
